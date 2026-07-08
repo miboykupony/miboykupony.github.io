@@ -3,73 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Przekierowanie - miboykupony</title>
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f5f7;
-            color: #222;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:#f5f6f8;
+            color:#111;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:20px;
         }
 
         .box {
-            background: white;
-            border-radius: 18px;
-            padding: 28px;
-            max-width: 420px;
-            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+            background:#fff;
+            max-width:460px;
+            width:100%;
+            border-radius:22px;
+            padding:30px;
+            text-align:center;
+            box-shadow:0 14px 40px rgba(0,0,0,.12);
         }
 
-        h1 {
-            margin-top: 0;
-            color: #ff4b2b;
+        .logo {
+            font-size:36px;
+            font-weight:900;
+            margin-bottom:10px;
+        }
+
+        .logo span {
+            color:#ff4b2b;
         }
 
         .button {
-            display: inline-block;
-            margin-top: 15px;
-            background: #ff4b2b;
-            color: white;
-            padding: 13px 22px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: bold;
+            display:inline-block;
+            margin-top:18px;
+            background:linear-gradient(135deg,#ff4b2b,#ff7847);
+            color:white;
+            padding:14px 24px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:bold;
         }
     </style>
 </head>
 <body>
+    <div class="box">
+        <div class="logo">miboy<span>kupony</span></div>
+        <h1>Przekierowanie do oferty</h1>
+        <p>Za chwilę otworzy się aktualna oferta.</p>
+        <a id="goButton" class="button" href="#">Przejdź do oferty</a>
+    </div>
 
-<div class="box">
-    <h1>miboykupony</h1>
-    <p>Przekierowuję do aktualnej oferty...</p>
-    <p>Jeśli przekierowanie nie nastąpi automatycznie, kliknij przycisk.</p>
-    <a id="goButton" class="button" href="#">Przejdź do oferty</a>
-</div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const url = params.get("u");
+        const button = document.getElementById("goButton");
 
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const url = params.get("u");
+        if (url && url.startsWith("http")) {
+            button.href = url;
 
-    const button = document.getElementById("goButton");
-
-    if (url && url.startsWith("http")) {
-        button.href = url;
-
-        setTimeout(function () {
-            window.location.href = url;
-        }, 700);
-    } else {
-        document.querySelector("p").innerText = "Brak poprawnego linku do oferty.";
-        button.style.display = "none";
-    }
-</script>
-
+            setTimeout(function () {
+                window.location.href = url;
+            }, 700);
+        } else {
+            button.style.display = "none";
+            document.body.innerHTML = "<div style='font-family:Arial;padding:30px;text-align:center'>Brak poprawnego linku do oferty.</div>";
+        }
+    </script>
 </body>
 </html>
