@@ -1,0 +1,7 @@
+IMAGE LOCALIZER REPORT
+Produkty: 182
+Pobrane nowe obrazki: 182
+Pominięte / już lokalne: 0
+Błędy pobierania: 0
+Podmienione pliki HTML: 185
+Folder: C:\Users\gearb\OneDrive\Pulpit\AdmitadBot\site\assets\products
