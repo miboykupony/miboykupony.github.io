@@ -272,6 +272,26 @@
             font-weight:bold;
         }
 
+        .coupon-empty {
+            background:#fff7f4;
+            border:1px dashed #ffb39b;
+            border-radius:18px;
+            padding:28px;
+            box-shadow:0 8px 24px rgba(0,0,0,.04);
+        }
+
+        .coupon-empty-title {
+            font-size:32px;
+            color:#ff4b2b;
+            font-weight:900;
+            margin-bottom:8px;
+        }
+
+        .coupon-empty-text {
+            color:#555;
+            font-size:17px;
+        }
+
         .product-grid {
             display:grid;
             grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
@@ -435,8 +455,6 @@
             <a class="active" href="index.html">Strona główna</a>
             <a href="#kupony">Kupony AliExpress</a>
             <a href="#okazje">Promocje</a>
-            <a href="afiliacja.html">Afiliacja</a>
-            <a href="regulamin.html">Regulamin</a>
         </nav>
 
         <a class="top-cta" href="#okazje">Do okazji →</a>
@@ -500,31 +518,12 @@
         <a href="#okazje">Zobacz okazje →</a>
     </div>
 
-    <div class="coupon-grid">
-        <div class="coupon">
-            <div class="coupon-value">20 zł</div>
-            <div class="coupon-desc">Zamówienia od 200 zł</div>
-            <div class="coupon-code"><b>MIBOY20</b><span>Kopiuj</span></div>
+    
+        <div class="coupon-empty">
+            <div class="coupon-empty-title">Wkrótce nowe kupony AliExpress</div>
+            <div class="coupon-empty-text">Aktualne kody promocyjne pojawią się tutaj, gdy będą dostępne.</div>
         </div>
-
-        <div class="coupon">
-            <div class="coupon-value">50 zł</div>
-            <div class="coupon-desc">Zamówienia od 400 zł</div>
-            <div class="coupon-code"><b>MIBOY50</b><span>Kopiuj</span></div>
-        </div>
-
-        <div class="coupon">
-            <div class="coupon-value">100 zł</div>
-            <div class="coupon-desc">Zamówienia od 800 zł</div>
-            <div class="coupon-code"><b>MIBOY100</b><span>Kopiuj</span></div>
-        </div>
-
-        <div class="coupon">
-            <div class="coupon-value">Więcej</div>
-            <div class="coupon-desc">Więcej kuponów w aplikacji AliExpress</div>
-            <div class="coupon-code"><b>Sprawdzaj</b><span>OK</span></div>
-        </div>
-    </div>
+        
 </section>
 
 <section class="section" id="okazje">
