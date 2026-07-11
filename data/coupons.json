@@ -1,14 +1,26 @@
 [
   {
-    "value": "-30 zł",
-    "description": "Zakupy od 260 zł",
-    "code": "BDPL08",
-    "source": "AliExpress"
+    "discount": "-250 zł",
+    "amount": "-250 zł",
+    "min_order": "Zakupy od 2000 zł",
+    "condition": "Zakupy od 2000 zł",
+    "code": "VSPL60",
+    "url": "https://s.click.aliexpress.com/e/_c30QUolh"
   },
   {
-    "value": "-15 zł",
-    "description": "Zakupy od 130 zł",
-    "code": "BDPL04",
-    "source": "AliExpress"
+    "discount": "-200 zł",
+    "amount": "-200 zł",
+    "min_order": "Zakupy od 1600 zł",
+    "condition": "Zakupy od 1600 zł",
+    "code": "VSPL45",
+    "url": "https://s.click.aliexpress.com/e/_c30QUolh"
+  },
+  {
+    "discount": "-100 zł",
+    "amount": "-100 zł",
+    "min_order": "Zakupy od 800 zł",
+    "condition": "Zakupy od 800 zł",
+    "code": "VSPL30",
+    "url": "https://s.click.aliexpress.com/e/_c30QUolh"
   }
 ]

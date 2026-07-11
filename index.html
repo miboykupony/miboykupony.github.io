@@ -509,13 +509,13 @@
         </div>
 
         <div class="hero-art">
-            <img src="assets/miboy-art.jpg.jpg" alt="miboykupony">
+            <img src="assets/miboy-art.jpg" alt="miboykupony">
         </div>
     </div>
 
     <div class="manual-banner">
-        <a href="go.html?u=https%3A%2F%2Frzekl.com%2Fg%2F1e8d114494878ea1054c16525dc3e8%2F%3Fulp%3Dhttps%253A%252F%252Fwww.aliexpress.com%252Fssr%252F300003299%252Fshop-brands-worry-free-8iu2ky%253FdisableNav%253DYES%2526pha_manifest%253Dssr%2526_immersiveMode%253Dtrue%2526businessCode%253Dguide" target="_blank" rel="nofollow sponsored noopener">
-            <img src="assets/grafika1.jpg.jpg" alt="Aktualna grafika promocyjna">
+        <a href="go.html?u=https%3A%2F%2Fs.click.aliexpress.com%2Fe%2F_c30QUolh" target="_blank" rel="nofollow sponsored noopener">
+            <img src="assets/grafika1.png" alt="Aktualna grafika promocyjna">
         </a>
     </div>
 </section>
@@ -528,20 +528,29 @@
 
     <div class='coupon-grid'>
         <div class="coupon">
-            <div class="coupon-value">-30 zł</div>
-            <div class="coupon-desc">Zakupy od 260 zł</div>
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
             <div class="coupon-code">
-                <b>BDPL08</b>
-                <button class="copy-coupon" type="button" data-code="BDPL08">Kopiuj</button>
+                <b>VSPL60</b>
+                <button class="copy-coupon" type="button" data-code="VSPL60">Kopiuj</button>
             </div>
         </div>
         
         <div class="coupon">
-            <div class="coupon-value">-15 zł</div>
-            <div class="coupon-desc">Zakupy od 130 zł</div>
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
             <div class="coupon-code">
-                <b>BDPL04</b>
-                <button class="copy-coupon" type="button" data-code="BDPL04">Kopiuj</button>
+                <b>VSPL45</b>
+                <button class="copy-coupon" type="button" data-code="VSPL45">Kopiuj</button>
+            </div>
+        </div>
+        
+        <div class="coupon">
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
+            <div class="coupon-code">
+                <b>VSPL30</b>
+                <button class="copy-coupon" type="button" data-code="VSPL30">Kopiuj</button>
             </div>
         </div>
         </div>
@@ -4809,6 +4818,220 @@
         });
     });
 </script>
+
+
+<!-- MIBOY COUPON REDIRECT PATCH START -->
+<style>
+.miboy-copy-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 26px;
+    transform: translateX(-50%);
+    z-index: 999999;
+    background: #111827;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 12px 30px rgba(0,0,0,.28);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+}
+
+.miboy-copy-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-6px);
+}
+
+.copy-coupon.miboy-copied {
+    opacity: .95;
+    transform: scale(.98);
+}
+</style>
+
+<script>
+(function () {
+    const COUPON_REDIRECT_URL = "https://s.click.aliexpress.com/e/_c30QUolh";
+    const OPEN_DELAY_MS = 850;
+
+    function showToast(message) {
+        let toast = document.querySelector(".miboy-copy-toast");
+
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.className = "miboy-copy-toast";
+            document.body.appendChild(toast);
+        }
+
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        setTimeout(function () {
+            toast.classList.remove("show");
+        }, 2400);
+    }
+
+    function cleanCode(text) {
+        return String(text || "")
+            .replace(/Kopiuj/gi, "")
+            .replace(/Skopiowano/gi, "")
+            .replace(/Kod/gi, "")
+            .replace(/:/g, "")
+            .trim();
+    }
+
+    function findCouponCode(button) {
+        const attrs = [
+            "data-code",
+            "data-coupon",
+            "data-coupon-code",
+            "data-clipboard-text",
+            "data-value"
+        ];
+
+        for (const attr of attrs) {
+            const value = button.getAttribute(attr);
+            if (value && cleanCode(value).length > 0) {
+                return cleanCode(value);
+            }
+        }
+
+        const card = button.closest(".coupon-card, .coupon, .coupon-item, .deal-coupon, article, section, div");
+
+        if (card) {
+            const selectors = [
+                ".coupon-code",
+                ".code",
+                ".coupon__code",
+                "[data-coupon-code]",
+                "strong",
+                "b"
+            ];
+
+            for (const selector of selectors) {
+                const el = card.querySelector(selector);
+                if (el) {
+                    const value = el.getAttribute("data-coupon-code") || el.textContent;
+                    const code = cleanCode(value);
+
+                    if (code.length >= 3) {
+                        return code;
+                    }
+                }
+            }
+        }
+
+        return "";
+    }
+
+    function copyUsingTextarea(text) {
+        try {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "fixed";
+            textarea.style.left = "-9999px";
+            textarea.style.top = "-9999px";
+            textarea.style.opacity = "0";
+
+            document.body.appendChild(textarea);
+
+            textarea.focus();
+            textarea.select();
+            textarea.setSelectionRange(0, textarea.value.length);
+
+            const ok = document.execCommand("copy");
+
+            document.body.removeChild(textarea);
+
+            return ok;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function copyToClipboard(text, callback) {
+        const oldMethodOk = copyUsingTextarea(text);
+
+        if (oldMethodOk) {
+            callback(true);
+            return;
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text)
+                .then(function () {
+                    callback(true);
+                })
+                .catch(function () {
+                    callback(false);
+                });
+
+            return;
+        }
+
+        callback(false);
+    }
+
+    function setButtonCopied(button) {
+        const oldText = button.getAttribute("data-old-text") || button.textContent || "Kopiuj";
+        button.setAttribute("data-old-text", oldText);
+
+        button.textContent = "Skopiowano ✓";
+        button.classList.add("miboy-copied");
+
+        setTimeout(function () {
+            button.textContent = oldText;
+            button.classList.remove("miboy-copied");
+        }, 2500);
+    }
+
+    function openCouponLink() {
+        const tab = window.open(COUPON_REDIRECT_URL, "_blank");
+
+        if (!tab) {
+            showToast("Kod skopiowany. Przeglądarka zablokowała nową kartę.");
+        }
+    }
+
+    document.addEventListener("click", function (event) {
+        const button = event.target.closest ? event.target.closest(".copy-coupon") : null;
+
+        if (!button) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
+        const code = findCouponCode(button);
+
+        if (!code) {
+            button.textContent = "Brak kodu";
+            showToast("Nie znaleziono kodu kuponu.");
+            return;
+        }
+
+        copyToClipboard(code, function (ok) {
+            if (ok) {
+                setButtonCopied(button);
+                showToast("Kod skopiowany: " + code);
+
+                setTimeout(function () {
+                    openCouponLink();
+                }, OPEN_DELAY_MS);
+            } else {
+                button.textContent = "Nie skopiowano";
+                showToast("Nie udało się skopiować kodu.");
+            }
+        });
+    }, true);
+})();
+</script>
+<!-- MIBOY COUPON REDIRECT PATCH END -->
 
 </body>
 </html>
