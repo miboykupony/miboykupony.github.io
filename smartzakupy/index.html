@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miboy SmartZakupy – inteligentne wyszukiwanie produktów i promocji</title>
+  <meta name="description" content="Znajdź produkty dopasowane do potrzeb, budżetu i oczekiwań. Miboy SmartZakupy pomaga kupować mądrzej.">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="./" aria-label="Miboy SmartZakupy">
+          <span class="brand-mark">M</span>
+          <span class="brand-text">
+            <strong>Miboy</strong>
+            <small>SmartZakupy</small>
+          </span>
+        </a>
+
+        <nav class="topnav" aria-label="Główna nawigacja">
+          <a href="#wyszukiwarka">Wyszukiwarka</a>
+          <a href="#promocje">Promocje</a>
+          <a href="#kategorie">Kategorie</a>
+          <a href="../">Miboy Kupony</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="wyszukiwarka">
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Inteligentny doradca zakupowy</span>
+            <h1>Co chcesz dziś kupić?</h1>
+            <p class="hero-lead">
+              Wpisz produkt, budżet albo najważniejszą cechę.
+              Pokażemy propozycje najlepiej dopasowane do Twojego zapytania.
+            </p>
+
+            <form id="searchForm" class="smart-search">
+              <div class="search-label">Opisz, czego szukasz</div>
+              <div class="search-box">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input
+                  id="searchInput"
+                  type="search"
+                  placeholder="np. telefon do 1500 zł z dobrym aparatem"
+                  autocomplete="off"
+                >
+                <button type="submit">Znajdź</button>
+              </div>
+              <div class="prompt-list" aria-label="Przykładowe wyszukiwania">
+                <button type="button" data-query="odkurzacz bezprzewodowy do 500 zł">Odkurzacz do 500 zł</button>
+                <button type="button" data-query="telefon z dobrym aparatem">Telefon z dobrym aparatem</button>
+                <button type="button" data-query="słuchawki bluetooth z ANC">Słuchawki z ANC</button>
+              </div>
+            </form>
+
+            <div class="trust-row">
+              <span>✓ szybkie porównanie</span>
+              <span>✓ dopasowanie do budżetu</span>
+              <span>✓ oferty partnerskie</span>
+            </div>
+          </div>
+
+          <aside class="hero-panel">
+            <div class="panel-badge">Smart wybór</div>
+            <h2>Znajdź produkt bez przekopywania dziesiątek sklepów</h2>
+
+            <div class="mini-result">
+              <div class="mini-icon">📱</div>
+              <div>
+                <strong>Telefon do 1500 zł</strong>
+                <span>dobry aparat · 5G · mocna bateria</span>
+              </div>
+              <b>3 propozycje</b>
+            </div>
+
+            <div class="mini-result">
+              <div class="mini-icon">🧹</div>
+              <div>
+                <strong>Odkurzacz pionowy</strong>
+                <span>lekki · do mieszkania · do 500 zł</span>
+              </div>
+              <b>2 propozycje</b>
+            </div>
+
+            <div class="panel-note">
+              Wersja startowa korzysta z lokalnej bazy produktów. Później podłączymy
+              aktualne ceny, promocje i prawdziwe AI.
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="quick-categories" id="kategorie">
+        <div class="container">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow dark">Popularne kategorie</span>
+              <h2>Od czego zaczynamy?</h2>
+            </div>
+          </div>
+
+          <div class="category-grid">
+            <button class="category-card" data-query="telefon">
+              <span>📱</span>
+              <strong>Telefony</strong>
+              <small>smartfony i akcesoria</small>
+            </button>
+            <button class="category-card" data-query="odkurzacz">
+              <span>🧹</span>
+              <strong>Dom i sprzątanie</strong>
+              <small>odkurzacze i roboty</small>
+            </button>
+            <button class="category-card" data-query="słuchawki">
+              <span>🎧</span>
+              <strong>Audio</strong>
+              <small>słuchawki i głośniki</small>
+            </button>
+            <button class="category-card" data-query="motoryzacja">
+              <span>🚗</span>
+              <strong>Motoryzacja</strong>
+              <small>akcesoria do auta</small>
+            </button>
+            <button class="category-card" data-query="smartwatch">
+              <span>⌚</span>
+              <strong>Smartwatche</strong>
+              <small>sport i powiadomienia</small>
+            </button>
+            <button class="category-card" data-query="dom">
+              <span>🏠</span>
+              <strong>Do domu</strong>
+              <small>praktyczne urządzenia</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section" id="promocje">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow dark">Dopasowane propozycje</span>
+              <h2 id="resultsTitle">Najciekawsze produkty na start</h2>
+            </div>
+            <p id="resultsInfo">
+              Przykładowe dane demonstracyjne. Później podmienimy je na prawdziwe oferty.
+            </p>
+          </div>
+
+          <div id="results" class="product-grid" aria-live="polite"></div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            <div class="empty-icon">🔎</div>
+            <h3>Nie znaleźliśmy pasującego produktu</h3>
+            <p>Spróbuj prostszego zapytania, np. „telefon”, „odkurzacz” albo „słuchawki”.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-section">
+        <div class="container">
+          <div class="section-head light">
+            <div>
+              <span class="eyebrow">Jak to działa</span>
+              <h2>Trzy kroki do lepszego wyboru</h2>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <article>
+              <span class="step-number">01</span>
+              <h3>Opisujesz potrzebę</h3>
+              <p>Wpisujesz produkt, cenę albo cechę, która jest dla Ciebie najważniejsza.</p>
+            </article>
+            <article>
+              <span class="step-number">02</span>
+              <h3>Porównujemy propozycje</h3>
+              <p>Wyniki są dopasowywane do zapytania oraz sortowane według trafności.</p>
+            </article>
+            <article>
+              <span class="step-number">03</span>
+              <h3>Przechodzisz do oferty</h3>
+              <p>Wybierasz produkt i klikasz przycisk prowadzący do sklepu.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark">M</span>
+            <span class="brand-text">
+              <strong>Miboy</strong>
+              <small>SmartZakupy</small>
+            </span>
+          </div>
+          <p>Kupuj mądrzej, szybciej i bez przypadkowych wyborów.</p>
+        </div>
+        <p class="disclosure">
+          Niektóre odnośniki mogą być linkami partnerskimi. Cena dla kupującego
+          pozostaje bez zmian.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/products.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

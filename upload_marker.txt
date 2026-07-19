@@ -1,6 +1,6 @@
 MIBOYKUPONY UPLOAD MARKER
-Wygenerowano: 2026-07-11 11:04:29
-Produkty w products.json: 182
-Pliki HTML w paczce: 190
+Wygenerowano: 2026-07-19 10:44:21
+Produkty w products.json: 270
+Pliki HTML w paczce: 278
 Źródło: C:\Users\gearb\OneDrive\Pulpit\AdmitadBot\site
 Paczka: C:\Users\gearb\OneDrive\Pulpit\AdmitadBot\_GITHUB_UPLOAD_NOW
