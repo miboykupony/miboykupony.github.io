@@ -153,7 +153,7 @@
 
         .benefits {
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            grid-template-columns:repeat(4,1fr);
             gap:14px;
         }
 
@@ -518,7 +518,7 @@
     </div>
 
     <div class="manual-banner">
-        <a href="go.html?u=https%3A%2F%2Fs.click.aliexpress.com%2Fe%2F_c3vph4sf" target="_blank" rel="nofollow sponsored noopener">
+        <a href="go.html?u=https%3A%2F%2Fs.click.aliexpress.com%2Fe%2F_c30QUolh" target="_blank" rel="nofollow sponsored noopener">
             <img src="assets/grafika1.png" alt="Aktualna grafika promocyjna">
         </a>
     </div>
@@ -532,89 +532,32 @@
 
     <div class='coupon-grid'>
         <div class="coupon">
-            <div class="coupon-value">-8 zł</div>
-            <div class="coupon-desc">Przy zakupach od 73 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
             <div class="coupon-code">
-                <b>PLSC02</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC02">Kopiuj</button>
+                <b>VSPL60</b>
+                <button class="copy-coupon" type="button" data-code="VSPL60">Kopiuj</button>
             </div>
         </div>
-
+        
         <div class="coupon">
-            <div class="coupon-value">-25 zł</div>
-            <div class="coupon-desc">Przy zakupach od 190 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
             <div class="coupon-code">
-                <b>PLSC06</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC06">Kopiuj</button>
+                <b>VSPL45</b>
+                <button class="copy-coupon" type="button" data-code="VSPL45">Kopiuj</button>
             </div>
         </div>
-
+        
         <div class="coupon">
-            <div class="coupon-value">-45 zł</div>
-            <div class="coupon-desc">Przy zakupach od 320 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
+            <div class="coupon-value">Kupon</div>
+            <div class="coupon-desc">Aktualny kod promocyjny</div>
             <div class="coupon-code">
-                <b>PLSC11</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC11">Kopiuj</button>
+                <b>VSPL30</b>
+                <button class="copy-coupon" type="button" data-code="VSPL30">Kopiuj</button>
             </div>
         </div>
-
-        <div class="coupon">
-            <div class="coupon-value">-78 zł</div>
-            <div class="coupon-desc">Przy zakupach od 580 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
-            <div class="coupon-code">
-                <b>PLSC20</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC20">Kopiuj</button>
-            </div>
         </div>
-
-        <div class="coupon">
-            <div class="coupon-value">-100 zł</div>
-            <div class="coupon-desc">Przy zakupach od 800 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
-            <div class="coupon-code">
-                <b>PLSC30</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC30">Kopiuj</button>
-            </div>
-        </div>
-
-        <div class="coupon">
-            <div class="coupon-value">-200 zł</div>
-            <div class="coupon-desc">Przy zakupach od 1600 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
-            <div class="coupon-code">
-                <b>PLSC45</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC45">Kopiuj</button>
-            </div>
-        </div>
-
-        <div class="coupon">
-            <div class="coupon-value">-250 zł</div>
-            <div class="coupon-desc">Przy zakupach od 2000 zł<br>
-                <small>Ważny do 7 sierpnia 2026, 23:59</small>
-            </div>
-            <div class="coupon-code">
-                <b>PLSC60</b>
-                <button class="copy-coupon" type="button"
-                    data-code="PLSC60">Kopiuj</button>
-            </div>
-        </div>
-    </div>
 </section>
 
 <section class="section" id="okazje">
