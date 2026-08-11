@@ -445,6 +445,41 @@
                 grid-template-columns:1fr;
             }
         }
+    
+        .miboy-cross-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: background 0.15s;
+            text-decoration: none;
+        }
+        .miboy-cross-link:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .miboy-cross-link img {
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+        .miboy-cross-link span {
+            color: white;
+            font-size: 12px;
+            line-height: 1.15;
+            display: flex;
+            flex-direction: column;
+        }
+        .miboy-cross-link b {
+            font-size: 13px;
+            font-weight: 900;
+        }
+        @media (max-width: 900px) {
+            .miboy-cross-link span { display: none; }
+        }
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8894969324130739" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
@@ -506,6 +541,14 @@
             <a class="active" href="index.html">Strona główna</a>
             <a href="#kupony">Kupony AliExpress</a>
             <a href="#okazje">Promocje</a>
+            <a class="miboy-cross-link" href="https://miboyzakupy.pl/" target="_blank" rel="noopener">
+              <img src="assets/miboy-art.jpg" alt="Miboy SmartZakupy">
+              <span><b>Miboy</b>SmartZakupy</span>
+            </a>
+            <a class="miboy-cross-link" href="https://miboyzakupy.pl/recenzje/" target="_blank" rel="noopener">
+              <img src="assets/miboy-art.jpg" alt="Miboy Recenzje">
+              <span><b>Miboy</b>Recenzje</span>
+            </a>
         </nav>
 
         <a class="top-cta" href="go.html?u=https%3A%2F%2Frzekl.com%2Fg%2F1e8d114494878ea1054c16525dc3e8%2F%3Fulp%3Dhttps%253A%252F%252Fbest.aliexpress.com%252F%253Fspm%253Da2g0o.tm1000066817.logo.1.6e602ae5qrrbim%2526_gl%253D1%252Ajrjr4m%252A_gcl_au%252ANzA3NjcyNzU4LjE3Nzc3ODU0NjU.%252A_ga%252AMjEzOTQ5MDIxLjE3NjgwNTA0MTg.%252A_ga_VED1YSGNC7%252AczE3ODM0ODc1NzEkbzEzJGcxJHQxNzgzNDkyMTQ2JGo2MCRsMCRoMA..%2526browser_redirect%253Dtrue" target="_blank" rel="nofollow sponsored noopener">Do okazji →</a>
