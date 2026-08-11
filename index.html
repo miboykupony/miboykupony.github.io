@@ -480,6 +480,25 @@
         @media (max-width: 900px) {
             .miboy-cross-link span { display: none; }
         }
+    
+        .topbar-inner {
+            justify-content: flex-end !important;
+        }
+        .nav {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav > a:not(.miboy-cross-link):not(.top-cta) {
+            color: white;
+            font-weight: 700;
+            opacity: .92;
+            padding: 0 8px;
+        }
+        .nav > a.active {
+            color: #ff4b2b;
+        }
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8894969324130739" crossorigin="anonymous"></script>
 <!-- Google tag (gtag.js) -->
@@ -535,12 +554,16 @@
 
 <header class="topbar">
     <div class="topbar-inner">
-        <div class="logo">miboy<span>kupony</span></div>
+        
 
         <nav class="nav">
             <a class="active" href="index.html">Strona główna</a>
             <a href="#kupony">Kupony AliExpress</a>
             <a href="#okazje">Promocje</a>
+            <a class="miboy-cross-link" href="https://miboykupony.github.io/">
+              <img src="assets/miboy-art.jpg" alt="Miboy Kupony">
+              <span><b>Miboy</b>Kupony</span>
+            </a>
             <a class="miboy-cross-link" href="https://miboyzakupy.pl/" target="_blank" rel="noopener">
               <img src="assets/miboy-art.jpg" alt="Miboy SmartZakupy">
               <span><b>Miboy</b>SmartZakupy</span>
