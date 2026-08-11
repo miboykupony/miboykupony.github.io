@@ -480,24 +480,50 @@
         @media (max-width: 900px) {
             .miboy-cross-link span { display: none; }
         }
-    
-        .topbar-inner {
-            justify-content: flex-end !important;
-        }
         .nav {
             display: flex;
             gap: 14px;
             align-items: center;
             flex-wrap: wrap;
         }
-        .nav > a:not(.miboy-cross-link):not(.top-cta) {
+        .nav > a.active {
+            color: #ff4b2b;
+        }
+    
+        .topbar-inner {
+            justify-content: flex-start !important;
+        }
+        .nav {
+            display: flex !important;
+            width: 100%;
+            justify-content: space-between !important;
+            align-items: center;
+            gap: 14px;
+        }
+        .nav-left {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-right {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-right > a {
             color: white;
             font-weight: 700;
             opacity: .92;
-            padding: 0 8px;
+            padding: 0 4px;
         }
-        .nav > a.active {
+        .nav-right > a.active {
             color: #ff4b2b;
+        }
+        @media (max-width: 900px) {
+            .nav { flex-direction: column; gap: 12px; }
+            .nav-right { justify-content: center; }
         }
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8894969324130739" crossorigin="anonymous"></script>
@@ -557,24 +583,28 @@
         
 
         <nav class="nav">
-            <a class="active" href="index.html">Strona główna</a>
-            <a href="#kupony">Kupony AliExpress</a>
-            <a href="#okazje">Promocje</a>
-            <a class="miboy-cross-link" href="https://miboykupony.github.io/">
-              <img src="assets/miboy-art.jpg" alt="Miboy Kupony">
-              <span><b>Miboy</b>Kupony</span>
-            </a>
-            <a class="miboy-cross-link" href="https://miboyzakupy.pl/" target="_blank" rel="noopener">
-              <img src="assets/miboy-art.jpg" alt="Miboy SmartZakupy">
-              <span><b>Miboy</b>SmartZakupy</span>
-            </a>
-            <a class="miboy-cross-link" href="https://miboyzakupy.pl/recenzje/" target="_blank" rel="noopener">
-              <img src="assets/miboy-art.jpg" alt="Miboy Recenzje">
-              <span><b>Miboy</b>Recenzje</span>
-            </a>
+            <div class="nav-left">
+              <a class="miboy-cross-link" href="https://miboykupony.github.io/">
+                <img src="assets/miboy-art.jpg" alt="Miboy Kupony">
+                <span><b>Miboy</b>Kupony</span>
+              </a>
+              <a class="miboy-cross-link" href="https://miboyzakupy.pl/" target="_blank" rel="noopener">
+                <img src="assets/miboy-art.jpg" alt="Miboy SmartZakupy">
+                <span><b>Miboy</b>SmartZakupy</span>
+              </a>
+              <a class="miboy-cross-link" href="https://miboyzakupy.pl/recenzje/" target="_blank" rel="noopener">
+                <img src="assets/miboy-art.jpg" alt="Miboy Recenzje">
+                <span><b>Miboy</b>Recenzje</span>
+              </a>
+            </div>
+            <div class="nav-right">
+              <a class="active" href="index.html">Strona główna</a>
+              <a href="#kupony">Kupony AliExpress</a>
+              <a href="#okazje">Promocje</a>
+            </div>
         </nav>
 
-        <a class="top-cta" href="go.html?u=https%3A%2F%2Frzekl.com%2Fg%2F1e8d114494878ea1054c16525dc3e8%2F%3Fulp%3Dhttps%253A%252F%252Fbest.aliexpress.com%252F%253Fspm%253Da2g0o.tm1000066817.logo.1.6e602ae5qrrbim%2526_gl%253D1%252Ajrjr4m%252A_gcl_au%252ANzA3NjcyNzU4LjE3Nzc3ODU0NjU.%252A_ga%252AMjEzOTQ5MDIxLjE3NjgwNTA0MTg.%252A_ga_VED1YSGNC7%252AczE3ODM0ODc1NzEkbzEzJGcxJHQxNzgzNDkyMTQ2JGo2MCRsMCRoMA..%2526browser_redirect%253Dtrue" target="_blank" rel="nofollow sponsored noopener">Do okazji →</a>
+        
     </div>
 </header>
 
